@@ -1,0 +1,53 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  3.0.x                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+application     cavitatingFoam;
+
+startFrom       latestTime;
+
+startTime       3.51e-05;
+
+stopAt          endTime;
+
+endTime         7.5e-05;
+
+deltaT          6.25e-09;
+
+writeControl    adjustableRunTime;
+
+writeInterval   5e-06;
+
+purgeWrite      0;
+
+writeFormat     ascii;
+
+writePrecision  15;
+
+writeCompression off;
+
+timeFormat      general;
+
+runTimeModifiable yes;
+
+adjustTimeStep  off;
+
+maxCo           0.5;
+
+maxAcousticCo   50;
+
+
+// ************************************************************************* //
